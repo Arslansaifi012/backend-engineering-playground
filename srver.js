@@ -10,9 +10,6 @@ const server = http.createServer((req, res)=>{
             console.log(chunks,'this is chunks data ');
             body.push(chunks);
         }) ;
-      
-        
-
         req.on('end', ()=>{
             const fullBody  = Buffer.concat(body).toString() ;
             // console.log(fullBody);
